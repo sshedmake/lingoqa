@@ -12,6 +12,9 @@ gem 'sqlite3', '~> 1.4'
 gem 'jbuilder', '~> 2.7'
 gem 'pg'
 gem "aws-sdk-s3"
+gem "rack-cors"  #part of the AWS SDK that will enable us to interface with S3
+gem "dotenv-rails"  #will allow us to stash credentials in a .env file and load them as environment variables while running a Rails server.
+
 
 gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
