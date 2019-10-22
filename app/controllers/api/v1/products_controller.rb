@@ -1,6 +1,12 @@
 class Api::V1::ProductsController < ApiController
+  
+  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update] ##  @s3_direct_post variable is declared to be available when creating and editing the user
+  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update] ##  @s3_direct_post variable is declared to be available when creating and editing the product
+
+
+
+
 
   # GET /products
   # GET /products.json
@@ -73,7 +79,8 @@ class Api::V1::ProductsController < ApiController
     # Use callbacks to share common setup or constraints between actions.
 
     def set_s3_direct_post
-    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')  ###
+   # @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')  ###
+    # render json: { url: data.url, fields: data.fields }, status: :ok
   end
 
 

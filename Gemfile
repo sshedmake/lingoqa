@@ -5,17 +5,19 @@ ruby '2.6.3'
 
 gem 'rails', '~> 6.0.0'
 gem 'sqlite3', '~> 1.4'
-#gem 'puma', '~> 3.11'
-#gem 'sass-rails', '~> 5'
-#gem 'webpacker', '~> 4.0'
+gem 'puma', '~> 3.11'
+gem 'sass-rails', '~> 5'
+gem 'webpacker', '~> 4.0'
 # => gem 'turbolinks', '~> 5'
+
 gem 'jbuilder', '~> 2.7'
 gem 'pg'
-gem "aws-sdk-s3"
-gem "rack-cors"  #part of the AWS SDK that will enable us to interface with S3
-gem "dotenv-rails"  #will allow us to stash credentials in a .env file and load them as environment variables while running a Rails server.
 
+#gem "rack-cors"  #part of the AWS SDK that will enable us to interface with S3
+#gem "dotenv-rails"  #will allow us to stash credentials in a .env file and load them as environment variables while running a Rails server.
 
+#gem 'aws-sdk-rails'
+#gem 'aws-sdk-s3'
 gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

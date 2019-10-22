@@ -29,4 +29,15 @@
 
 
 #Ignore because of credential information
-/config/storage.yml
+#/config/storage.yml
+/config/credentials.yml.enc
+/.env
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+/yarn.lock
+/node_modules/*
