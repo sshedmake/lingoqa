@@ -1,24 +1,20 @@
-# README
+# LingoQA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LingoQA is a ruby on rails application that provides a way to list down and analyze N number of screenshots for various products with the aim of testing screenshots of various products into different locales. 
+## Prerequisites
 
-Things you may want to cover:
+ - Ruby 2.6.3
+ - Rails 6.0.6
+ - Postgres 10.10
 
-* Ruby version
+## Set up Rails app
+1. First, install the gems required by the application:
+> bundle install
 
-* System dependencies
+2. Execute the database migrations/schema setup:
+> rake db:setup
 
-* Configuration
+3. Start the Rails server
+> rails server
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. And now you can visit the site with the URL http://localhost:3000 :+1:
