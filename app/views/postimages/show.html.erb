@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<!--Single upload -->
+
+<%= link_to 'All Uploaded images', postimages_path %>
+<h1><%= @postimage.title %></h1>
+ 
+<%= image_tag(@postimage.image.url, alt: 'Image') if @postimage.image? %>
+
+<%#= link_to(image_tag(@postimage.image.thumb.url, alt: 'Image'), @postimage.image.url, target: '_blank') if @postimage.image? %>
+
+
+<%= link_to 'Edit', edit_postimage_path(@postimage) %> 
+<%= link_to 'Back', postimages_path %>

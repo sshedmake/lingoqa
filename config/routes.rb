@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 resources :products
 resources :versions
 resources :locales
-
-
+resources :postimages
+#root to: 'products#index'
+root to: 'postimages#index'
    
 namespace :api do
 	namespace :v1 do

@@ -1,0 +1,32 @@
+<%= form_with(model: postimage, local: true) do |form| %>
+  <% if postimage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(postimage.errors.count, "error") %> prohibited this postimage from being saved:</h2>
+
+      <ul>
+        <% postimage.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+ 
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

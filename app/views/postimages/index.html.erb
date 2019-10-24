@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Upload Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @postimages.each do |postimage| %>
+      <tr>
+        <td><%= link_to 'Show', postimage %></td>
+        <td><%= link_to 'Edit', edit_postimage_path(postimage) %></td>
+        <td><%= link_to 'Destroy', postimage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Upload new image', new_postimage_path %>
